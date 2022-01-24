@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS banexcoin.clientes;
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE banexcoin.clientes (
+  id SERIAL NOT NULL DEFAULT AUTO_INCREMENT,
+  status INT NOT NULL,
+  fname VARCHAR(255) NOT NULL,
+  lname VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  birthdate TIMESTAMP NOT NULL,
+  createdAt TIMESTAMP NOT NULL,
+  updatedAt TIMESTAMP NOT NULL
+  PRIMARY KEY (id));
